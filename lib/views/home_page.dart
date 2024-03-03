@@ -5,6 +5,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            pinned: true,
+            floating: true,
+            expandedHeight: 160,
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text(
+                "Mohamed Zidan",
+                style: TextStyle(color: Colors.black),
+              ),
+              background: Image.asset('assets/images/zidan.jpg'),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
