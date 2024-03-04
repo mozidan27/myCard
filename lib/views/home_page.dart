@@ -17,12 +17,13 @@ class HomePage extends StatelessWidget {
             floating:
                 false, // false as defualt , we can use it to show the appBar once i back from the buttom to the top
             backgroundColor: const Color(0xff151515),
-            leading: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.white,
-                )),
+            //insted of using leading we can use a Drawer to open the side page
+            // leading: IconButton(
+            //     onPressed: () {},
+            //     icon: const Icon(
+            //       Icons.menu,
+            //       color: Colors.white,
+            //     )),
             expandedHeight: 400,
             // title: const Text(
             //   'Z I D A N',
@@ -44,7 +45,13 @@ class HomePage extends StatelessWidget {
             body:
                 "Hi, My name is mohamed zidan you can call me zooz,  i'm 28 years old , i live in cairo , i have a bachelor degree in accounting from the Faculty of Commerce at Ain University, i'm a flutter Developer, i'm working on android and iOS mobile applications, and I've been working as a listing specialist at amazon since a year.",
           ),
+          const CustomContainer(
+            title: 'Experince :- ',
+          )
         ],
+      ),
+      drawer: const Drawer(
+        surfaceTintColor: Colors.amber,
       ),
     );
   }
