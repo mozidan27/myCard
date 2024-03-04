@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
             pinned:
                 false, // false as defalute , we can use it to make the appBar always on top while scolling
             floating:
-                true, // false as defualt , we can use it to show the appBar once i back from the buttom to the top
+                false, // false as defualt , we can use it to show the appBar once i back from the buttom to the top
             backgroundColor: const Color(0xff151515),
             leading: IconButton(
                 onPressed: () {},
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
                   Icons.menu,
                   color: Colors.white,
                 )),
-            expandedHeight: 350,
+            expandedHeight: 400,
             // title: const Text(
             //   'Z I D A N',
             //   style: TextStyle(color: Colors.white),
@@ -39,10 +39,11 @@ class HomePage extends StatelessWidget {
             ),
           ),
           // sliver items
-          const CustomContainer(),
-          const CustomContainer(),
-          const CustomContainer(),
-          const CustomContainer(),
+          const CustomContainer(
+            title: 'About ME :-',
+            body:
+                "Hi, My name is mohamed zidan you can call me zooz,  i'm 28 years old , i live in cairo , i have a bachelor degree in accounting from the Faculty of Commerce at Ain University, i'm a flutter Developer, i'm working on android and iOS mobile applications, and I've been working as a listing specialist at amazon since a year.",
+          ),
         ],
       ),
     );
